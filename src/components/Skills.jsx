@@ -5,7 +5,7 @@ const Skills = () => {
     const skillCategories = [
         {
             title: 'Frontend',
-            skills: ['React', 'JavaScript', 'Next JS', 'Tailwind CSS', 'Redux', 'Tanstack Query'],
+            skills: ['React', 'React Native', 'JavaScript', 'Next JS', 'Tailwind CSS', 'Redux', 'Tanstack Query'],
         },
         {
             title: 'Backend',
