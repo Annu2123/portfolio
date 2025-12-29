@@ -3,6 +3,11 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
+    const social = [
+        { id: 1, icon: Github, link: 'https://github.com/Annu2123' },
+        { id: 2, icon: Linkedin, link: 'https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile' },
+        { id: 3, icon: Mail, link: 'mailto:anubrath4994@gmail.com' },
+    ];
     return (
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-gray-900 to-black pt-16">
             {/* Background Elements */}
@@ -47,13 +52,15 @@ const Hero = () => {
                     </div>
 
                     <div className="mt-12 flex items-center justify-center gap-6">
-                        {[Github, Linkedin, Mail].map((Icon, index) => (
+                        {social.map((item, index) => (
                             <a
                                 key={index}
-                                href="#"
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
                             >
-                                <Icon size={24} />
+                                <item.icon size={24} />
                             </a>
                         ))}
                     </div>
